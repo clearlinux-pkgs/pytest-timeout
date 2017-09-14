@@ -4,7 +4,7 @@
 #
 Name     : pytest-timeout
 Version  : 1.2.0
-Release  : 18
+Release  : 19
 URL      : https://pypi.debian.net/pytest-timeout/pytest-timeout-1.2.0.tar.gz
 Source0  : https://pypi.debian.net/pytest-timeout/pytest-timeout-1.2.0.tar.gz
 Summary  : py.test plugin to abort hanging tests
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505058078
+export SOURCE_DATE_EPOCH=1505368472
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505058078
+export SOURCE_DATE_EPOCH=1505368472
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
