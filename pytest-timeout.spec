@@ -4,13 +4,14 @@
 #
 Name     : pytest-timeout
 Version  : 1.2.0
-Release  : 19
+Release  : 20
 URL      : https://pypi.debian.net/pytest-timeout/pytest-timeout-1.2.0.tar.gz
 Source0  : https://pypi.debian.net/pytest-timeout/pytest-timeout-1.2.0.tar.gz
 Summary  : py.test plugin to abort hanging tests
 Group    : Development/Tools
 License  : MIT
 Requires: pytest-timeout-legacypython
+Requires: pytest-timeout-python3
 Requires: pytest-timeout-python
 Requires: pytest
 BuildRequires : pbr
@@ -54,6 +55,7 @@ pytest-timeout
 %package legacypython
 Summary: legacypython components for the pytest-timeout package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the pytest-timeout package.
@@ -63,9 +65,19 @@ legacypython components for the pytest-timeout package.
 Summary: python components for the pytest-timeout package.
 Group: Default
 Requires: pytest-timeout-legacypython
+Requires: pytest-timeout-python3
 
 %description python
 python components for the pytest-timeout package.
+
+
+%package python3
+Summary: python3 components for the pytest-timeout package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the pytest-timeout package.
 
 
 %prep
@@ -76,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505368472
+export SOURCE_DATE_EPOCH=1507169996
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505368472
+export SOURCE_DATE_EPOCH=1507169996
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -97,5 +109,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
