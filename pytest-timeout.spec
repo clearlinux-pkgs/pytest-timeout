@@ -4,7 +4,7 @@
 #
 Name     : pytest-timeout
 Version  : 1.2.1
-Release  : 25
+Release  : 26
 URL      : https://pypi.debian.net/pytest-timeout/pytest-timeout-1.2.1.tar.gz
 Source0  : https://pypi.debian.net/pytest-timeout/pytest-timeout-1.2.1.tar.gz
 Summary  : py.test plugin to abort hanging tests
