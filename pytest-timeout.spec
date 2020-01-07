@@ -4,7 +4,7 @@
 #
 Name     : pytest-timeout
 Version  : 1.3.4
-Release  : 42
+Release  : 43
 URL      : https://files.pythonhosted.org/packages/99/42/360b8451c5d1af0f259e6cdfa68713c93b6eb3542c68046f66d8bec34e6b/pytest-timeout-1.3.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/99/42/360b8451c5d1af0f259e6cdfa68713c93b6eb3542c68046f66d8bec34e6b/pytest-timeout-1.3.4.tar.gz
 Summary  : py.test plugin to abort hanging tests
