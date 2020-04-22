@@ -4,7 +4,7 @@
 #
 Name     : pytest-timeout
 Version  : 1.3.4
-Release  : 45
+Release  : 46
 URL      : https://files.pythonhosted.org/packages/99/42/360b8451c5d1af0f259e6cdfa68713c93b6eb3542c68046f66d8bec34e6b/pytest-timeout-1.3.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/99/42/360b8451c5d1af0f259e6cdfa68713c93b6eb3542c68046f66d8bec34e6b/pytest-timeout-1.3.4.tar.gz
 Summary  : py.test plugin to abort hanging tests
@@ -15,17 +15,18 @@ Requires: pytest-timeout-python = %{version}-%{release}
 Requires: pytest-timeout-python3 = %{version}-%{release}
 Requires: pytest
 BuildRequires : buildreq-distutils3
-BuildRequires : pluggy
-BuildRequires : py-python
+BuildRequires : pexpect
 BuildRequires : pytest
+BuildRequires : pytest-python
 BuildRequires : tox
-BuildRequires : virtualenv
 
 %description
+==============
 pytest-timeout
-        ==============
-        
-        |python| |version| |anaconda| |ci|
+==============
+|python| |version| |anaconda| |ci|
+.. |version| image:: http://img.shields.io/pypi/v/pytest-timeout.svg
+:target: https://pypi.python.org/pypi/pytest-timeout
 
 %package license
 Summary: license components for the pytest-timeout package.
@@ -64,7 +65,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583530251
+export SOURCE_DATE_EPOCH=1587561737
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
