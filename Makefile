@@ -1,5 +1,5 @@
 PKG_NAME := pytest-timeout
-URL = https://files.pythonhosted.org/packages/fd/f2/4202dea92b48712481e46bc6fb9122fd76baac727333858c69be5d19dfc5/pytest-timeout-1.4.2.tar.gz
+URL = https://files.pythonhosted.org/packages/a5/a7/612a48dfb84bfe281218826e4877ae1c52e59d6743fc0e5d04ee84700e94/pytest-timeout-2.0.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
